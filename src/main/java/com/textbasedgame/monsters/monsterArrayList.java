@@ -19,6 +19,7 @@ import com.textbasedgame.monsters.regularMonsters.snake;
 import com.textbasedgame.monsters.regularMonsters.troll;
 import com.textbasedgame.monsters.regularMonsters.turtle;
 import com.textbasedgame.monsters.regularMonsters.witch;
+import com.textbasedgame.monsters.regularMonsters.zombie;
 import com.textbasedgame.util.TrekkerMath;
 import com.textbasedgame.world.world;
 
@@ -36,6 +37,13 @@ public abstract class monsterArrayList {
             monsterSubclasses.remove(slime.class);
             monsterSubclasses.add(troll.class);
         }
+        else if (world.AREANUM == 3) { 
+            monsterSubclasses.add(zombie.class);
+        }
+        else if (world.AREANUM == 4) {
+            monsterSubclasses.remove(zombie.class);
+        }
+
     }
     
     public static Class<? extends monster> getMonsterType(){

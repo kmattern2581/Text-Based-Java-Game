@@ -4,14 +4,20 @@ public class TrekkerMath {
     
     public static Random rand = new Random();
     
-    //random integer generator [fromval, toVal)
-    public static int randomInt(int toVal, int fromVal){
-        int ret = (rand.nextInt(toVal-fromVal)) + fromVal;
+    //random integer generator [lowerBound, upperBound)
+    public static int randomInt(int upperBound, int lowerBound){
+        if(upperBound <= lowerBound){
+            return upperBound;
+        }
+        int ret = (rand.nextInt(upperBound-lowerBound)) + lowerBound;
         return ret;
     }
     //Exclusive double generator
-    public static double randomDouble(double toVal, double fromVal){
-        double ret = fromVal + (toVal - fromVal) * rand.nextDouble();
+    public static double randomDouble(double upperBound, double lowerBound){
+        if(upperBound <= lowerBound){
+            return upperBound;
+        }
+        double ret = lowerBound + (upperBound - lowerBound) * rand.nextDouble();
         return ret;
     }
 

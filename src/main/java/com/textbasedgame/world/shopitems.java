@@ -3,14 +3,40 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
 import com.textbasedgame.GUI.gui;
-import com.textbasedgame.items.*;
-import com.textbasedgame.items.genericItems.*;
-import com.textbasedgame.items.headArmorItems.*;
-import com.textbasedgame.items.chestArmorItems.*;
-import com.textbasedgame.items.consumableItems.*;
-import com.textbasedgame.items.footArmorItems.*;
-import com.textbasedgame.items.legsArmorItems.*;
-import com.textbasedgame.items.handItems.*;
+import com.textbasedgame.items.chestArmorItems.chestplate;
+import com.textbasedgame.items.chestArmorItems.spartanBreastplate;
+import com.textbasedgame.items.chestArmorItems.wizardCloak;
+import com.textbasedgame.items.consumableItems.agilityPot;
+import com.textbasedgame.items.consumableItems.beefsteak;
+import com.textbasedgame.items.consumableItems.bread;
+import com.textbasedgame.items.consumableItems.coffee;
+import com.textbasedgame.items.consumableItems.fish;
+import com.textbasedgame.items.consumableItems.genericPotion;
+import com.textbasedgame.items.consumableItems.intelligencePot;
+import com.textbasedgame.items.consumableItems.strengthPot;
+import com.textbasedgame.items.consumableItems.threeCourseMeal;
+import com.textbasedgame.items.consumableItems.throwingKnife;
+import com.textbasedgame.items.consumables;
+import com.textbasedgame.items.equipables;
+import com.textbasedgame.items.footArmorItems.clogs;
+import com.textbasedgame.items.footArmorItems.leatherBoots;
+import com.textbasedgame.items.footArmorItems.spartanBoots;
+import com.textbasedgame.items.footArmorItems.wizardShoes;
+import com.textbasedgame.items.handItems.bowArrow;
+import com.textbasedgame.items.handItems.club;
+import com.textbasedgame.items.handItems.dagger;
+import com.textbasedgame.items.handItems.escalibur;
+import com.textbasedgame.items.handItems.hydraHead;
+import com.textbasedgame.items.handItems.pen;
+import com.textbasedgame.items.handItems.spartanSpear;
+import com.textbasedgame.items.handItems.sword;
+import com.textbasedgame.items.handItems.wand;
+import com.textbasedgame.items.headArmorItems.helmet;
+import com.textbasedgame.items.headArmorItems.spartanHelmet;
+import com.textbasedgame.items.headArmorItems.wizardHat;
+import com.textbasedgame.items.item;
+import com.textbasedgame.items.legsArmorItems.leatherPants;
+import com.textbasedgame.items.legsArmorItems.spartanSkirt;
 import com.textbasedgame.playerFiles.player;
 import com.textbasedgame.util.TrekkerMath;
 
@@ -53,7 +79,8 @@ public abstract class shopitems {
         equipableShopItems.add( wizardShoes.class);
         equipableShopItems.add(wizardHat.class);
         equipableShopItems.add( wizardCloak.class);
-
+        equipableShopItems.add(bowArrow.class);
+        equipableShopItems.add(leatherBoots.class);
 
         allItemsList.add(fish.class);
         allItemsList.add(sword.class);
@@ -84,7 +111,8 @@ public abstract class shopitems {
         allItemsList.add(spartanSpear.class);
         allItemsList.add(coffee.class);
         allItemsList.add(pen.class);
-
+        allItemsList.add(bowArrow.class);
+        allItemsList.add(leatherBoots.class);
     }
 
     public static void printShopItems(){

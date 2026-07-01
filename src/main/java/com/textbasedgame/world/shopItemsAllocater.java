@@ -88,7 +88,9 @@ public class shopItemsAllocater {
                         wand.class,
                         leatherPants.class,
                         dagger.class,
-                        club.class
+                        club.class,
+                        bowArrow.class,
+                        leatherBoots.class
                     )
                 );
             }
@@ -109,7 +111,9 @@ public class shopItemsAllocater {
                         spartanBreastplate.class,
                         spartanBoots.class,
                         spartanHelmet.class,
-                        spartanSkirt.class
+                        spartanSkirt.class,
+                        bowArrow.class,
+                        leatherBoots.class
                     )
                 );
             }
@@ -131,7 +135,9 @@ public class shopItemsAllocater {
                         spartanBoots.class,
                         spartanHelmet.class,
                         spartanSkirt.class,
-                        pen.class
+                        pen.class,
+                        bowArrow.class,
+                        leatherBoots.class
                     )
                 );
             }

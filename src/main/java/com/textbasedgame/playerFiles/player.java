@@ -1,7 +1,6 @@
 package com.textbasedgame.playerFiles;
 import java.util.ArrayList;
 import java.util.Set;
-import java.util.HashSet;
 
 import com.textbasedgame.GUI.gui;
 import com.textbasedgame.items.consumables;
@@ -327,6 +326,15 @@ public abstract class player {
         }
         gui.updatePlayerSide();
 
+    }
+
+    public static boolean inventoryContains(Class<? extends item> c){
+        for(item i : inventory){
+            if(c.isInstance(i)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void printPlayerItems(){

@@ -5,7 +5,6 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 import java.lang.reflect.Type;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -139,7 +138,7 @@ public abstract class saveFiles {
             fWriter.write("Player-XP: " + player.getXP() + "\n");
             fWriter.write("World-StageNum: " + world.stageNum + "\n");
             fWriter.write("World-AreaNum: " + world.AREANUM + "\n");
-            fWriter.write("PlayerCoins: " + player.BankBalance + "\n");
+            fWriter.write("PlayerCoins: " + player.gold + "\n");
             fWriter.write("PlayerLuck: " + player.luck + "\n");
             fWriter.close();
             JSONWriter.close();
@@ -293,7 +292,7 @@ public abstract class saveFiles {
                 goToNextReadableText(myReader);
                 areaNum = myReader.nextInt();
                 goToNextReadableText(myReader);
-                player.BankBalance = myReader.nextInt();
+                player.gold = myReader.nextInt();
                 goToNextReadableText(myReader);
                 player.luck = myReader.nextDouble();
 

@@ -4,14 +4,26 @@ public class TrekkerMath {
     
     public static Random rand = new Random();
     
-    //random integer generator [lowerBound, upperBound)
-    public static int randomInt(int upperBound, int lowerBound){
-        if(upperBound <= lowerBound){
-            return upperBound;
-        }
-        int ret = (rand.nextInt(upperBound-lowerBound)) + lowerBound;
+    /**
+    * random integer generator [fromval, toVal) 
+    */
+    public static int randomInt(int toVal, int fromVal){
+        int ret = (rand.nextInt(toVal-fromVal)) + fromVal;
         return ret;
     }
+
+    /**
+    * Seeded random integer generator [fromval, toVal) 
+    * @param toVal The upper bound (exclusive) for the random integer.
+    * @param fromVal The lower bound (inclusive) for the random integer.
+    * @param seededRand The Random object to use for generating the random integer.
+    * @return A random integer between fromVal (inclusive) and toVal (exclusive).
+    */
+    public static int seededRandomInt(int toVal, int fromVal, Random seededRand){
+        int ret = (seededRand.nextInt(toVal-fromVal)) + fromVal;
+        return ret;
+    }
+
     //Exclusive double generator
     public static double randomDouble(double upperBound, double lowerBound){
         if(upperBound <= lowerBound){

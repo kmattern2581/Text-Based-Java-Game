@@ -49,8 +49,6 @@ public abstract class shopitems {
     public static ArrayList<Class<? extends consumables>> consumableShopItems = new ArrayList<>();
     public static ArrayList<Class<? extends equipables>> equipableShopItems = new ArrayList<>();
     
-    public static int[] itemPrice = {5, 1, 25, 30, 10, 3, 30};
-    
     private static item[] itemsInShop = new item[6];
 
     public static void createShopItemsArr(){
@@ -179,7 +177,7 @@ public abstract class shopitems {
  
 
     public static void printShop(){
-        gui.printOnGameSide("You have " + player.BankBalance + " shmeckles!");
+        gui.printOnGameSide("You have " + player.gold + " shmeckles!");
 
         gui.printOnGameSide("Heres whats in the shop!");
         printShopItems();
@@ -192,7 +190,7 @@ public abstract class shopitems {
         player.addItemToPlayer(toAdd);
         
 
-        player.BankBalance -= toAdd.getPrice();
+        player.gold -= toAdd.getPrice();
 
         createShop();
     }
@@ -201,7 +199,7 @@ public abstract class shopitems {
         player.addItemToPlayer(i);
         
 
-        player.BankBalance -= i.getPrice();
+        player.gold -= i.getPrice();
 
         createShop();
     }

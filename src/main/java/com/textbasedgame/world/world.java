@@ -48,7 +48,6 @@ public abstract class world {
         Ans = Ans.toLowerCase();
         gui.pushOldText();
         if (response.quit(Ans)){gui.quit();}
-        //OPEN SHOP!!!
         if(response.Shop(Ans)){
             shop.openShop();
         }
@@ -87,7 +86,7 @@ public abstract class world {
         }
 
         //create monster
-        Room room = roomFactory.getRandomRoom();
+        Room room = roomFactory.getNextRoom();
         room.openRoom();
 
         stageNum++;

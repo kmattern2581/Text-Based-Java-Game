@@ -22,8 +22,13 @@ public class runTime
     private static boolean newSaveFolderBool;
     
     public static void main(String[] args) {
-        
-        startup();
+       
+		try {
+			startup();
+		} catch (Exception e) {
+			System.out.print(e);	
+			System.out.print("Error when starting up");
+		}
 
         gui.setImage(imageIDs.SHOP);
 
@@ -64,7 +69,7 @@ public class runTime
                     TitleScreen.class.wait();
                 }
                 catch(Exception e){
-                    
+                    System.out.println("Error waiting for title screen to open: " + e.getMessage());
                 }
             }
         }
@@ -82,7 +87,7 @@ public class runTime
             //Create Player
             player.setName(Name);
 
-            //Allocate poins
+            //Allocate points
             gui.printOnGameSide("Its time to allocate some skill points!");
             gui.printOnGameSide("Would You like to allocate your own points? ");
             String Response = gui.getInput();
@@ -116,5 +121,6 @@ public class runTime
         else{
             player.addItemToPlayer(new club(1), true);
         }
+
     }
 }

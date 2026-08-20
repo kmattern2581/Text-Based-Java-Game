@@ -14,7 +14,14 @@ public class leatherBoots extends boots {
         setName("letherBoots");
         setDescription("Some truly uncomfortable lether shoes. It seems to be better than nothing but only slightly. You can see how these would aid you in any special way.");
     }
-    
+     public leatherBoots(int qual){
+        setQuality(qual);
+        armorAdd = (int)(this.quality * 1.25);
+        setPrice(5);
+        setName("leatherBoots");
+        setDescription("Some truly uncomfortable lether shoes. It seems to be better than nothing but only slightly. You can see how these would aid you in any special way.");
+
+            }
     @Override
     protected Set<String> getTagsSet() {
         return tags;
